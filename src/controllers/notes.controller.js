@@ -20,10 +20,10 @@ notesCtrl.createNewNote = async(req, res) => {
 
     const { title, description } = req.body;
     const newNote = new Note({
-        title: title,
-        description: description
-            //title,
-            //description
+
+
+        title,
+        description
     })
 
     //para guardarlos se pueden guadar en nuestra db
@@ -32,6 +32,7 @@ notesCtrl.createNewNote = async(req, res) => {
     await newNote.save();
     console.log(newNote);
     res.send('nueva nota')
+        //res.render('notes/new-note')
 }
 
 //creara todas las notdas, mas bien msotrara
@@ -42,7 +43,7 @@ notesCtrl.renderNotes = async(req, res) => {
     //crea un areglo de notas
     const notes = await Note.find();
     res.render("notes/all-notes", { notes });
-    res.render("notes/all-notes", { notes });
+    //res.render("notes/all-notes", { notes });
 }
 
 notesCtrl.renderEditForm = (req, res) => {

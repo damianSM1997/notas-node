@@ -2,12 +2,19 @@ const { Router } = require('express');
 const router = Router();
 
 const {
+
     renderNoteForm,
     createNewNote,
     renderNotes,
     renderEditForm,
     updateNote,
     deleteNote
+    //renderNoteForm,
+    //createNewNote,
+    //renderNotes,
+    //renderEditForm,
+    //updateNote,
+    //deleteNote
 } = require('../controllers/notes.controller');
 
 
@@ -18,6 +25,8 @@ router.get('/notes/add', renderNoteForm);
 
 //el de abajo es el del curso pero a mi me interesa la siguiente line
 router.post('/notes/new-note', createNewNote);
+
+
 //router.post('/notes/add', createNewNote);
 
 //get all notes
