@@ -5,11 +5,11 @@ const { Schema, model } = require('mongoose');
 
 const NoteSchema = new Schema({
     title: {
-        type: string,
+        type: String,
         required: true
     },
     description: {
-        type: string,
+        type: String,
         required: true,
     },
 }, {

@@ -13,8 +13,12 @@ const {
 
 // para direccionar a la parte que creara las notas
 router.get('/notes/add', renderNoteForm);
+//router.get('/notes/add', renderNoteForm);
 // te panga a hacer la nota xd entonces se puede modificar el link xd
+
+//el de abajo es el del curso pero a mi me interesa la siguiente line
 router.post('/notes/new-note', createNewNote);
+//router.post('/notes/add', createNewNote);
 
 //get all notes
 router.get('/notes', renderNotes);
